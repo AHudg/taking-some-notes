@@ -9,6 +9,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+
+// Used to delegate routes
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
