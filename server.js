@@ -2,7 +2,7 @@ const express = require('express');
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.use(express.static('public'));
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
-app.listen(port, () => {
-    console.log(`API server now on port ${port}.`);
-    console.log(`View the projects here: http://localhost:${port}`);
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}.`);
+    console.log(`View the projects here: http://localhost:${PORT}`);
 });
